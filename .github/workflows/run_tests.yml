@@ -142,4 +142,4 @@ jobs:
         uses: actions/upload-pages-artifact@v2
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actio
+        uses: actions/deploy-pages@v1.2.9
