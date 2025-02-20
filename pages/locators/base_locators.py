@@ -1,5 +1,6 @@
 remove_item_loc = "(//a[@title='Remove This Item'])"
 pop_up_ok_button_loc = "(//button[@class='action-primary action-accept'])"
+agree_cookie_button_loc = "(//button[@class = ' css-1n36tvh'])"
 delete_item_icon_loc = "(//a[@class='action delete'])"
 email_field_loc = "(//input[@name='login[username]'])"
 password_field_loc = "(//input[@name='login[password]'])"

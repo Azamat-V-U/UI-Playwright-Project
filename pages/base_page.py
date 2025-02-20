@@ -22,6 +22,10 @@ class BasePage:
     def find(self, locator):
         return self.page.locator(locator)
 
+    # def accept_cookies(self):
+    #     agree_button = self.find(lc.agree_cookie_button_loc)
+    #     agree_button.click()
+
     @allure.step("Check that the response message matches the expected one")
     def message_verification(self, text):
         message = self.find(lc.text_message).first

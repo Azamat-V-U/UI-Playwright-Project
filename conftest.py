@@ -1,9 +1,16 @@
 import pytest
+import os
 from playwright.sync_api import BrowserContext
 from pages.create_new_customer_account_page import CustomerNewAccount
 from pages.login_page import LoginPage
 from pages.eco_friendly_page import EcoFriendlyPage
 from pages.sale_page import SalePage
+from dotenv import load_dotenv
+
+load_dotenv()
+
+EMAIL = os.getenv("EMAIL")
+PASSWORD = os.getenv("PASSWORD")
 
 
 @pytest.fixture()
@@ -38,4 +45,5 @@ def login_page(page, context):
 def logged_in_user(page, context):
     account = LoginPage(page, context)
     account.open_page()
-    account.log_in("Laurence95@yahoo.com", "VShbp3hR3zjTdAy")
+    # account.accept_cookies()
+    account.log_in(EMAIL, PASSWORD)
